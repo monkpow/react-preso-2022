@@ -1,0 +1,13 @@
+Browser tools:
+
+Component inspector:
+* selecting component
+* navigating up and down the tree
+* tree indicator in browser window
+
+Show print source
+Show props and changes to props.
+
+Show backlinking between two 
+
+Show console interactions and state changes, props.
