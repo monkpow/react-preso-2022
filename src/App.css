@@ -29,7 +29,8 @@
   background-color: #282c34;
 }
 
-.dark-mode .App-header {
+.dark-mode .App-header,
+.dark-mode h1{
   color: white;
 }
 
@@ -48,10 +49,10 @@
 
 @keyframes spin-and-shake {
   from {
-    transform: translateX(55px) rotate(-2deg);
+    transform: translateX(155px) rotate(-2deg);
   }
   to {
-    transform: translateX(-550px) rotate(270deg);
+    transform: translateX(-850px) rotate(570deg);
   }
 }
 
