@@ -33,20 +33,10 @@ function App() {
       return checked ? startingList.concat(fx) : startingList;
     });
   }
-    //console.log(uiFx);
-    //setUiFx(xfx => xfx.filter(existingFx => existingFx != fx))
-//debugger
-    //if (checked) {
-      //setUiFx(xfx => []);
-    //} else {
-      //setUiFx(xfx => [...xfx, fx]);
-    //}
-  //}
 
   function updateDarkMode() {
     setDarkMode(!darkMode);
   }
-
 
   return (
     <div className={ ["App", (darkMode ? 'dark-mode' :''), uiFx.join(" ")].join(" ") }>
