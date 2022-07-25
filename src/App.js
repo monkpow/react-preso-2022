@@ -47,6 +47,8 @@ function App() {
       />
       <header className="App-header">
         <img src={ logoSrc() } className="App-logo" alt="logo" />
+      </header>
+      <div class="options-list">
         <div>
           <label>
             <input type="checkbox" onChange={updateDarkMode} checked={darkMode}/>
@@ -71,18 +73,7 @@ function App() {
             Gigantic
           </label>
         </div>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn more about Thoughtful
-        </a>
-      </header>
+      </div>
     </div>
   );
 }
