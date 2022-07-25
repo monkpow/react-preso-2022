@@ -8,8 +8,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App
-      problematic="noway"
-      makessense="ok"
+      darkmode="true"
+      presentationUnderway="false"
     />
   </React.StrictMode>
 );
