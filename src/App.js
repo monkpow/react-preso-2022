@@ -20,9 +20,6 @@ function App() {
   const [darkMode, setDarkMode] = useDarkModeStateWithLabel(true);
   const [uiFx, setUiFx] = useEffectsStateWithLabel([]);
 
-  function stripFx(fxlist, fx) {
-  }
-
   function updateFx(item) {
     let fx = item.target.attributes['data-fx'].value
     let checked = item.target.checked;
@@ -38,6 +35,10 @@ function App() {
     setDarkMode(!darkMode);
   }
 
+  function logoSrc() {
+    return darkMode ? "thoughtful_logo_colorwhite.png" : "thoughtful_logo_colorblack.png"
+  }
+
   return (
     <div className={ ["App", (darkMode ? 'dark-mode' :''), uiFx.join(" ")].join(" ") }>
       <NavBar
@@ -45,10 +46,10 @@ function App() {
         audience="React Meetup"
       />
       <header className="App-header">
-        <img src="thoughtful_logo_colorwhite.png" className="App-logo" alt="logo" />
+        <img src={ logoSrc() } className="App-logo" alt="logo" />
         <div>
           <label>
-            <input type="checkbox" onChange={updateDarkMode} />
+            <input type="checkbox" onChange={updateDarkMode} checked={darkMode}/>
             Dark Mode
           </label>
         </div>
@@ -56,6 +57,18 @@ function App() {
           <label>
             <input type="checkbox" onChange={updateFx} data-fx="jitter" />
             Jitter Effect
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" onChange={updateFx} data-fx="spiro" />
+            Spirograph
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" onChange={updateFx} data-fx="giant" />
+            Gigantic
           </label>
         </div>
         <p>
