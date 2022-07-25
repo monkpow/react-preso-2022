@@ -20,10 +20,28 @@ function App() {
   const [darkMode, setDarkMode] = useDarkModeStateWithLabel(true);
   const [uiFx, setUiFx] = useEffectsStateWithLabel([]);
 
+  function stripFx(fxlist, fx) {
+  }
+
   function updateFx(item) {
     let fx = item.target.attributes['data-fx'].value
-    setUiFx(xfx => [...xfx, fx]);
+    let checked = item.target.checked;
+
+    let fxList = uiFx.filter(existingFx => existingFx != fx);
+    setUiFx(xfx => {
+      let startingList = xfx.filter(x => x !== fx)
+      return checked ? startingList.concat(fx) : startingList;
+    });
   }
+    //console.log(uiFx);
+    //setUiFx(xfx => xfx.filter(existingFx => existingFx != fx))
+//debugger
+    //if (checked) {
+      //setUiFx(xfx => []);
+    //} else {
+      //setUiFx(xfx => [...xfx, fx]);
+    //}
+  //}
 
   function updateDarkMode() {
     setDarkMode(!darkMode);
@@ -31,7 +49,7 @@ function App() {
 
 
   return (
-    <div className={ ["App", (darkMode ? 'dark-mode' :'')].join(" ") }>
+    <div className={ ["App", (darkMode ? 'dark-mode' :''), uiFx.join(" ")].join(" ") }>
       <NavBar
         appName="Thoughtful.ai"
         audience="React Meetup"
