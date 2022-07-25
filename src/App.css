@@ -14,8 +14,9 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .jitter .App-logo {
-    animation: horizontal-shaking infinite .2s linear;
+    animation: horizontal-shaking infinite .1s linear;
   }
+
   .spiro .App-logo {
     animation: App-logo-spin infinite 2s linear;
   }
@@ -82,18 +83,18 @@ h1 {
 
 @keyframes horizontal-shaking {
   from {
-    transform: translateX(5px);
+    transform: translateX(12px);
   }
   to {
-    transform: translateX(-5px);
+    transform: translateX(-12px);
   }
 }
 
 @keyframes App-logo-spin {
   from {
-    transform: rotate(-2deg);
+    transform: rotate(-9deg) scale(1.25);
   }
   to {
-    transform: rotate(2deg);
+    transform: rotate(9deg) scale(0.65);
   }
 }
