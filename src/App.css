@@ -1,9 +1,10 @@
 .App {
   text-align: center;
+  color: #000;
 }
 
 .giant .App-logo {
-  height: 40vmin;
+  height: 22rem;
 }
 
 .App-logo {
@@ -12,13 +13,24 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  .jitter .App-logo {
+    animation: horizontal-shaking infinite .2s linear;
+  }
   .spiro .App-logo {
     animation: App-logo-spin infinite 2s linear;
+  }
+
+  .jitter.spiro .App-logo {
+    animation: spin-and-shake infinite .5s ease-in;
   }
 }
 
 .dark-mode {
   background-color: #282c34;
+}
+
+.dark-mode .App-header {
+  color: white;
 }
 
 .App-header {
@@ -28,11 +40,28 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+@keyframes spin-and-shake {
+  from {
+    transform: translateX(55px) rotate(-2deg);
+  }
+  to {
+    transform: translateX(-550px) rotate(270deg);
+  }
+}
+
+@keyframes horizontal-shaking {
+  from {
+    transform: translateX(5px);
+  }
+  to {
+    transform: translateX(-5px);
+  }
 }
 
 @keyframes App-logo-spin {
