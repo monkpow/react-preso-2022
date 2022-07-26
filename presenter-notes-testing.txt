@@ -1,9 +1,13 @@
 Arrange-Act-Assert pattern
 
-TDD preamble
+TDD preamble; overview of react-testing-library
 
 Bring up example
 
-Show debugging
+Explain options of debugger/tracer
+
+Show debugging (in console, and in browser)
 
 Start building the same app
+
+
