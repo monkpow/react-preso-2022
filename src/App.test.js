@@ -13,3 +13,12 @@ test('Renders in dark-mode by default', () => {
   expect(element).toHaveClass('dark-mode');
 });
 
+test('Clicking the darkMode checkbox toggles darkMode', () => {
+  render(<App />);
+  const element = screen.getByTestId('main-body-styles')
+  expect(element).not.toHaveClass('jitter');
+  fireEvent.click(screen.getByText('Too much coffee'))
+  expect(element).toHaveClass('jitter');
+});
+
+

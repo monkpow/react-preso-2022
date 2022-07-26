@@ -3,3 +3,7 @@ Arrange-Act-Assert pattern
 TDD preamble
 
 Bring up example
+
+Show debugging
+
+Start building the same app
