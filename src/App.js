@@ -24,10 +24,9 @@ function App() {
     let fx = item.target.attributes['data-fx'].value
     let checked = item.target.checked;
 
-    let fxList = uiFx.filter(existingFx => existingFx != fx);
     setUiFx(xfx => {
-      let startingList = xfx.filter(x => x !== fx)
-      return checked ? startingList.concat(fx) : startingList;
+      let resultingList = xfx.filter(x => x !== fx)
+      return checked ? resultingList.concat(fx) : resultingList;
     });
   }
 
