@@ -6,7 +6,10 @@ Component inspector:
 * tree indicator in browser window
 
 Show print source
+
 Show props and changes to props.
+* simple props: browser name
+* compound props: effects mode
 
 Show backlinking between two 
 

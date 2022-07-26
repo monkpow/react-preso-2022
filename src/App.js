@@ -48,7 +48,7 @@ function App() {
       <header className="App-header">
         <img src={ logoSrc() } className="App-logo" alt="logo" />
       </header>
-      <div class="options-list">
+      <div className="options-list">
         <div>
           <label>
             <input type="checkbox" onChange={updateDarkMode} checked={darkMode}/>
@@ -58,7 +58,7 @@ function App() {
         <div>
           <label>
             <input type="checkbox" onChange={updateFx} data-fx="jitter" />
-            Jitter Effect
+            Too much coffee
           </label>
         </div>
         <div>
