@@ -1,22 +1,22 @@
-const EffectsSelector = ({getter, setter, darkModeGetter, darkModeSetter}) => {
+const EffectsSelector = ({uiFx, setUiFx, darkMode, setDarkMode}) => {
 
   const handleChange = (event) => {
     const fx = event.target.attributes['data-fx'].value
     const checked = event.target.checked;
 
-    setter(xfx => {
+    setUiFx(xfx => {
       const filteredList = xfx.filter(x => x !== fx)
       return checked ? filteredList.concat(fx) : filteredList;
     });
   }
 
-  const updateDarkMode = event => darkModeSetter(event.target.checked);
-  const fxIsEnabled= (token) => getter.includes(token);
+  const updateDarkMode = event => setDarkMode(event.target.checked);
+  const fxIsEnabled= (token) => uiFx.includes(token);
 
   return (
     <div className="options-list">
       <label>
-        <input type="checkbox" onChange={updateDarkMode} checked={darkModeGetter} data-fx="dark-mode"/>
+        <input type="checkbox" onChange={updateDarkMode} checked={darkMode} data-fx="dark-mode"/>
         Dark Mode
       </label>
       <label>

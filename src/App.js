@@ -19,9 +19,7 @@ function App() {
   const [darkMode, setDarkMode] = useDarkModeStateWithLabel(true);
   const [uiFx, setUiFx] = useEffectsStateWithLabel([]);
 
-  const updateDarkMode = event => setDarkMode(event.target.checked);
   const logoSrc = () => darkMode ? "thoughtful_logo_colorwhite.png" : "thoughtful_logo_colorblack.png"
-
   const appClassNames = () => [ "App", (darkMode ? "dark-mode" :""), uiFx.join(" ") ].join(" ")
 
   return (
@@ -29,14 +27,16 @@ function App() {
       <NavBar
         audience="React Meetup"
       />
+
       <header className="App-header">
         <img src={ logoSrc() } className="App-logo" alt="logo" />
       </header>
+
       <EffectsSelector
-        getter={uiFx}
-        setter={setUiFx}
-        darkModeGetter={darkMode}
-        darkModeSetter={setDarkMode}
+        uiFx={uiFx}
+        setUiFx={setUiFx}
+        darkMode={darkMode}
+        setDarkMode={setDarkMode}
       />
     </div>
   );
