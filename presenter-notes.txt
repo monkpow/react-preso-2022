@@ -11,10 +11,12 @@ Show props and changes to props.
 * simple props: browser name
 * compound props: effects mode
 
-Show backlinking between two 
+Show backlinking between two
 
 Show console interactions and state changes, props.
 
-Add a note about how to label hooks
+Add a note about how to label hooks: Show in comments
 
 https://www.youtube.com/watch?v=rb1GWqCJid4
+
+Break up application into more components
