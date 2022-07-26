@@ -39,7 +39,7 @@ function App() {
   }
 
   return (
-    <div className={ ["App", (darkMode ? 'dark-mode' :''), uiFx.join(" ")].join(" ") }>
+    <div className={ ["App", (darkMode ? 'dark-mode' :''), uiFx.join(" ")].join(" ") } data-testid="main-body-styles">
       <NavBar
         appName="Thoughtful.ai"
         audience="React Meetup"

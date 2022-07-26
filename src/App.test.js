@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, fireEvent, screen } from '@testing-library/react';
 import App from './App';
 
 test('Displays greeting', () => {
@@ -9,7 +9,7 @@ test('Displays greeting', () => {
 
 test('Renders in dark-mode by default', () => {
   render(<App />);
-  const linkElement = screen.getByText(/Hello/i);
-  expect(linkElement).toBeInTheDocument();
+  const element = screen.getByTestId('main-body-styles')
+  expect(element).toHaveClass('dark-mode');
 });
 
